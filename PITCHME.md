@@ -1,4 +1,12 @@
 # Learn how:
 ### Build a chatbot the easy way
-<br>
-#### Dr. Henrik Loeser (hloeser@de.ibm.com / data-henrik)
+---
+## Chatbot concepts
+* Intents
+* Entities
+* Dialog
+* Slots
+* Context
+---
+## Cloud Insurance Co.
+![](https://github.com/IBM-Cloud/cloudco-insurance/raw/master/architecture.png)
