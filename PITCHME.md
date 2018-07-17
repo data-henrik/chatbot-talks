@@ -1,7 +1,9 @@
 ---?image=assets/images/can-chat-chatting-362.jpg&size=auto 110%
 # Learn how:
 ### Build a chatbot the easy way
-
+<br>
+<br>
+Dr. Henrik Loeser
 ---
 <br>
 ## Wikipedia:
