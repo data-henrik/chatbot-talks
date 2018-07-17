@@ -1,5 +1,5 @@
 # Chatbots - Getting Started 2018
-Resources for my July 2018 talks on chatbots.
+Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
 
 # Overview
 Here is an overview of chatbot concepts. [Wikipedia has this short description about chatbots](https://en.wikipedia.org/wiki/Chatbot) :
