@@ -1,0 +1,16 @@
+#
+# GitPitch Slideshow Custom Settings
+#
+# For details, visit Wiki:
+# https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
+#
+theme : white
+#theme-override : assets/css/PITCHME.css
+# theme-override : assets/css/PITCHME.codemax.css
+layout : top-left
+highlight : hybrid
+logo : assets/images/ibmpos_blue.jpg
+logo-position : top-right
+transition : none
+published : true
+footnote : "(c) IBM - Dr. Henrik Loeser - twitter.com/data_henrik"
