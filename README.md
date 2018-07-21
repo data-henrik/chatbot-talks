@@ -1,46 +1,27 @@
-# Chatbots - Getting Started 2018
-Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
+# Chatbots - Eine Einführung 2018
+Hier sind Ressources zu meinem Kurzvortrag zu Chatbots bei [Hack to the future in Friedrichshafen](https://www.hacktothefuture.de/de/startseite/httf-friedrichshafen/). Um die Präsentation anzuschauen, starte [PITCHME.md bei GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/deutsch_httf).
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
-# Overview
-Here is an overview of chatbot concepts. [Wikipedia has this short description about chatbots](https://en.wikipedia.org/wiki/Chatbot) :
-> A chatbot (also known as a talkbots, chatterbot, Bot, IM bot, interactive agent, or Artificial Conversational Entity) is a computer program or an artificial intelligence which conducts a conversation via auditory or textual methods.   
+# Überblick
+[Wikipedia beschreibt Chatbots](https://de.wikipedia.org/wiki/Chatbot) wie folgt:
+> Ein Chatterbot, Chatbot oder kurz Bot ist ein textbasiertes Dialogsystem, welches das Chatten mit einem technischen System erlaubt. Er hat je einen Bereich zur Textein- und -ausgabe, über die sich in natürlicher Sprache mit dem dahinterstehenden System kommunizieren lässt.
 
-Accordingly, chatbots have two tasks:   
-> Understanding the user's intent and producing the correct answer.
+Chatbots haben zwei Hauptaufgaben:   
+> Die Benutzerabsicht erkennen und eine dazu passende Antwort erzeugen.
 
-To understand the user's intent and to produce the correct answer, some additional concepts are used:
-* **Intents** are what the user aims for, the desired action or result of the interaction. An intent can be to retrieve a weather report.
-* **Entities** are (real or virtual) subjects or objects. For the example of the weather report, entities can be the city or country, e.g., Friedrichshafen in Germany, or date and time information such as "today afternoon".
-* A **dialog**, **dialog flow** or **dialog tree** is used to structure the interaction. Typically, an interaction lasts longer than the user providing input and the chatbot returning a single answer. A dialog can be highly complex with several levels, subbranches, (directed) links between **dialog nodes** and more.   
-  For a weather chatbot, a dialog could be constructed that, after a greeting, asks the user about the location and time for a weather report, then asks if additional information, such as a weather outlook for the next few days, is needed.
-* **Slots** are supported by several chatbot systems. Slots are used to specify the data items that need to be specified in order to produce the result of an intent. To return a weather report, e.g., at least the location and maybe the date or time is needed.
-* **Context** is state information that is carried from step to step for a specific user interaction. The context typically stores the information that is already gathered as input (see "slot"), result-related data or metadata, or general chat information, e.g., the user name.
+Im Zusammenhang mit Chatbots gibt es die folgenden Konzepte.
+* **Intents** (Absichten) sind die Ziele bzw. erwünschte Ergebnisse der Interaktion. Das kann z.B. der aktuelle Wetterbericht, ein Witz oder das Tagesprogramm sein.
+* **Entities** (Dinge oder Entitäten) sind Objekte jeder Art. Dies kann ein Ort für einen Wetterbericht, das Datum, Personen, Produkte usw. sein. Sie können auch umschrieben werden, z.B. "heute" oder "morgen", "dieser Nachmittag".
+* Der **Dialog** oder Dialogbaum / Dialogfluss beschreibt die Struktur bei der Interaktion zwischen Bot und Nutzer. Diese kann u.a. sehr komplex sein, wenn ein Gespräch ähnlich wie bei Mensch zu Mensch gewünscht ist.   
+* **Slots** oder auch Aussparung oder Schlitz wird von Chatbot-Systemen zum Sammeln von Eingaben verwendet. Jeder Slot beschreibt eine erwartete Benutzereingabe. Für einen Wetterbericht wird der Ort und das Datum benötigt.   
+* Der **Context** bzw. Kontext beschreibt die Statusinformationen bzw. Daten, die von einem Schritt der Interaktion zum nächsten Schritt transportiert werden. Das können alle aktuellen Eingaben (aus den Slots), der aktuelle Knoten im Dialogbaum und der aktuelle "Intent" sind.
 
-The following architecture diagram is part of the [Cloud Insurance Co](https://github.com/IBM-Cloud/cloudco-insurance) demo. That demo features an insurance portal. A chatbot assist customers to file claims and to check coverage. Administrators have access to chat logs to improve customer satisfaction.   
-![](https://github.com/IBM-Cloud/cloudco-insurance/raw/master/architecture.png)
+# Ressources
+Die folgenden Komponenten habe ich verwendet:
+* [Botkit](https://github.com/howdyai/botkit/)
+* [Botkit Middleware für IBM Watson Assistant (Conversation)](https://github.com/watson-developer-cloud/botkit-middleware)
+* [IBM Watson Assistant service](https://console.bluemix.net/docs/services/conversation/index.html#about)
+Die gesamte Kombination lässt sich kostenlos betreiben.
 
-# Resources
-
-### Tutorials & Demos
-The following tutorials give a good introduction to chatbots:
-* [Getting started tutorial for Watson Assistant](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
-* [Build a database-driven Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
-* [Build a voice-enabled Android chatbot](https://console.bluemix.net/docs/tutorials/android-watson-chatbot.html)
-* [Cloud insurance Co.](https://github.com/IBM-Cloud/cloudco-insurance)
-* [Bot Asset Exchange](https://developer.ibm.com/code/exchanges/bots/)
-
-### Related blog posts
-I wrote quite a number of blog posts about chatbots. The articles have links to further information.
-* [Database-driven Slack chatbot with Conversation service](https://www.ibm.com/blogs/bluemix/2018/02/database-slack-chatbot-conversation/)   
-* [Chatbots: Some tricks with slots in conversations](https://www.ibm.com/blogs/bluemix/2018/02/chatbots-some-tricks-with-slots-in-ibm-watson-conversation/)
-* [Lively chatbots: Best Practices](https://www.ibm.com/blogs/bluemix/2017/07/lively-chatbots-best-practices/)
-* [Building chatbots: more tipcs and tricks](https://www.ibm.com/blogs/bluemix/2017/06/building-chatbots-tips-tricks/)
-* [Lessons and Tips from a Chatbot Hackathon](https://www.ibm.com/blogs/bluemix/2017/05/lessons-tips-chatbot-hackathon/)
-* [Watson Conversation: How to Manage Workspaces](https://www.ibm.com/blogs/bluemix/2017/04/watson-conversation-manage-workspaces/)
-* [Extended: Manage and interact with Watson Assistant from the command line](https://blog.4loeser.net/2018/07/extended-manage-and-interact-with.html)
-
-### Other resources
-* [Watson Conversation Variables](https://github.com/IBM-Cloud/watson-conversation-variables) has tips and tricks around processing context variables within Watson Assistant
-* [watson conversation tool](https://github.com/data-henrik/watson-conversation-tool): tool to manage and interact with Watson Assistant from the command line. Written in Python using the Watson SDK.
+Weitere Informationen lassen sich im englischsprachigen ["master branch"](https://github.com/data-henrik/chatbot-talk2018) finden.

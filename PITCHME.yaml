@@ -9,8 +9,8 @@ theme : white
 # theme-override : assets/css/PITCHME.codemax.css
 layout : top-left
 highlight : hybrid
-logo : assets/images/ibmpos_blue.jpg
+logo : assets/images/HTTF_Logo_web.jpg
 logo-position : top-right
 transition : none
 published : true
-footnote : "(c) IBM - <a href='https://blog.4loeser.net'>Dr. Henrik Loeser</> - <a href='https://twitter.com/data_henrik'>twitter.com/data_henrik</a>"
+footnote : "<a href='https://blog.4loeser.net'>Dr. Henrik Loeser</> - <a href='https://twitter.com/data_henrik'>twitter.com/data_henrik</a>"

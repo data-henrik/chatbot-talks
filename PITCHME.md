@@ -1,37 +1,37 @@
 ---?image=assets/images/can-chat-chatting-362.jpg&size=auto 110%
-# Learn how:
-### Build a chatbot the easy way
+# Chatbots:
+### Eine kurze Einführung
 <br>
 <br>
 Dr. Henrik Loeser
 ---
 <br>
 ## Wikipedia:
-A **chatbot** (also known as a talkbot, chatterbot, Bot, IM bot, interactive agent, or Artificial Conversational Entity) is a computer program or an artificial intelligence which conducts a conversation via auditory or textual methods.   
+Ein Chatterbot, Chatbot oder kurz Bot ist ein textbasiertes Dialogsystem, welches das Chatten mit einem technischen System erlaubt. Er hat je einen Bereich zur Textein- und -ausgabe, über die sich in natürlicher Sprache mit dem dahinterstehenden System kommunizieren lässt.
 
 ---
 <br>
 
-## Chatbots have two tasks:
-Understanding the user's intent and producing the correct answer.
-
+## Chatbots haben zwei Aufgaben:
+Die Benutzerabsicht erkennen und eine dazu passende Antwort erzeugen.
 ---
-## Chatbot concepts
+## Chatbot-Konzepte
 <br>
 
-- Intents: What is it about?
-- Entities: identified subjects and objects
-- Dialog (tree): structured interaction
-- Slots: gather necessary input
-- Context: carry state information
+- Intent / Absicht: Um was geht es?
+- Entities / Dinge: Welche Objekte kommen vor?
+- Dialog (-baum): strukturierte Interaktion
+- Slots: Welche Information wird zur Verarbeitung benötigt?
+- Kontext: Metadaten, gesammelte Eingaben, Verarbeitungsstand
 
 ---
-## Big Picture
+## Chatbots im Kontext
 <br>
-- chatbot usually part of a (more complex) solution
-- app or server actions to access back-end resources or services
-- enhance language processing with tools
-- integration with voice / speech services
+- Chatbots sind typischerweise Teil einer größeren Lösung
+- natürliche(re) Interaktionen in Selbstbedienung
+- Zugriff auf weitere Systeme (Datenbanken, Kundensysteme, ...)
+- Verarbeitete Sprache kann über weitere Dienste angereichert werden
+- Integration mit Sprachein- und -ausgabe zu "Voice Agent" / Sprachsystem
 
 ---
 ## Cloud Insurance Co.
@@ -41,4 +41,4 @@ Understanding the user's intent and producing the correct answer.
 <br>
 <br>
 <br>
-# Let's see it live
+# Genug der Präsentation...
