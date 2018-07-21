@@ -1,6 +1,8 @@
 # Chatbots - Getting Started 2018
 Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
 
+Eine deutsche Version ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).
+
 ![](assets/images/can-chat-chatting-362.jpg)
 
 # Overview
