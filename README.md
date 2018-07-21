@@ -22,6 +22,7 @@ Die folgenden Komponenten habe ich verwendet:
 * [Botkit](https://github.com/howdyai/botkit/)
 * [Botkit Middleware für IBM Watson Assistant (Conversation)](https://github.com/watson-developer-cloud/botkit-middleware)
 * [IBM Watson Assistant service](https://console.bluemix.net/docs/services/conversation/index.html#about)
+* Der Bot läuft als Docker Container auf dem [IBM Cloud Kubernetes Service](https://console.bluemix.net/docs/containers/container_index.html#container_index)
 Die gesamte Kombination lässt sich kostenlos betreiben.
 
 Weitere Informationen lassen sich im englischsprachigen ["master branch"](https://github.com/data-henrik/chatbot-talk2018) finden.
