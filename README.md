@@ -20,9 +20,19 @@ Im Zusammenhang mit Chatbots gibt es die folgenden Konzepte.
 # Ressources
 Die folgenden Komponenten habe ich verwendet:
 * [Botkit](https://github.com/howdyai/botkit/)
-* [Botkit Middleware für IBM Watson Assistant (Conversation)](https://github.com/watson-developer-cloud/botkit-middleware)
+* [Botkit Middleware für IBM Watson Assistant (Conversation)](https://github.com/watson-developer-cloud/botkit-middleware) mit dem Beispiel [Simple Bot](https://github.com/watson-developer-cloud/botkit-middleware/tree/master/examples/simple-bot)
 * [IBM Watson Assistant service](https://console.bluemix.net/docs/services/conversation/index.html#about)
 * Der Bot läuft als Docker Container auf dem [IBM Cloud Kubernetes Service](https://console.bluemix.net/docs/containers/container_index.html#container_index)
-Die gesamte Kombination lässt sich kostenlos betreiben.
 
-Weitere Informationen lassen sich im englischsprachigen ["master branch"](https://github.com/data-henrik/chatbot-talk2018) finden.
+### Der Bot zum Vortrag
+Die gesamte Kombination lässt sich kostenlos betreiben. Den Bot haben ich mit den folgenden (ganz groben) Schritten "gebaut":
+1. Über `git clone https://github.com/watson-developer-cloud/botkit-middleware` das Repository herunterladen.
+2. In das Verzeichnis `examples/simple-bot` wechseln.
+3. Bei [IBM Cloud](https://console.bluemix.net) mit einem kostenlosen Lite-Konto den Dienst [Watson Assistant](https://console.bluemix.net/catalog/services/watson-assistant-formerly-conversation) provisioniert (bestellt). Dann dort das Werkzeug im Browser gestartet und einen leeren "Workspace" angelegt. Entweder direkt oder später "Intents" und auch einen Dialog anlegen.
+4. Nun bei [Slack eine neue App](https://api.slack.com/apps) erstellen und für sie ein Zugriffs-Token erzeugen.
+5. Zum Schluss im Verzeichnis `simple-bot` die Zugriffsdaten für Watson Assistant und Slack in die Datei `.env` eintragen.
+6. Mit `npm install` einmalig alle benötigten Dateien installieren, dann mit `npm start` das Botkit-Programm starten.
+7. Dialog in Watson Assistant anlegen und in Slack testen.
+
+### Hinweise
+Weitere Informationen lassen sich im englischsprachigen ["master branch"](https://github.com/data-henrik/chatbot-talk2018) finden. Gerne dürft ihr mich auch im HTTF-Slack kontaktieren.
