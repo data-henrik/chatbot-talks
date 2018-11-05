@@ -1,7 +1,9 @@
-# Chatbots - Getting Started 2018
-Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
+# Building a Slack or Facebook bot for Db2
+Resources for my talk at IDUG EMEA 2018 in Malta.
 
-Eine deutsche Version ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).
+Note:
+Eine deutsche Version meines Chatbot-Talks ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).   
+The regular english version of my chatbot talk is available in the [master branch](https://github.com/data-henrik/chatbot-talk2018/tree/master).
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
