@@ -2,6 +2,7 @@
 Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
 
 Eine deutsche Version ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).
+The IDUG EMEA 2018 version is accessible in the branch [idug2018](https://github.com/data-henrik/chatbot-talk2018/tree/idug2018)
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
