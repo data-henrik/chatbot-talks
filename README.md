@@ -3,10 +3,12 @@ Resources for my talk at IDUG EMEA 2018 in Malta. Things I cover(ed):
 * [Slack](https://slack.com/) as query interface, using [IBM Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html#about) to process the natural language input.
 * [Open source drivers for IBM database servers](https://github.com/ibmdb/) to connect the chatbot middleware and Watson Assistant to Db2.
 * Code is based on the GitHub repos [Slack chatbot with Db2 integration](https://github.com/IBM-Cloud/slack-chatbot-database-watson) and [GitHub traffic stats, Slack integration](https://github.com/IBM-Cloud/github-traffic-stats/)
+* Check out the blog on [automated reports with cloud functions, Db2 and Slack](https://blog.4loeser.net/2018/10/automated-reported-with-ibm-cloud.html). It shows how Db2-based statistic reports can be pushed into Slack channels on a regular basis.
+* [IBM Cloud solution tutorial on how to build Db2-based Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
 
 Note:
-Eine deutsche Version meines Chatbot-Talks ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).   
-The regular english version of my chatbot talk is available in the [master branch](https://github.com/data-henrik/chatbot-talk2018/tree/master).
+* Eine deutsche Version meines Chatbot-Talks ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).   
+* The regular english version of my chatbot talk is available in the [master branch](https://github.com/data-henrik/chatbot-talk2018/tree/master).
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
