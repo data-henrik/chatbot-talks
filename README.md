@@ -5,6 +5,7 @@ Resources for my talk at IDUG EMEA 2018 in Malta. Things I cover(ed):
 * Code is based on the GitHub repos [Slack chatbot with Db2 integration](https://github.com/IBM-Cloud/slack-chatbot-database-watson) and [GitHub traffic stats, Slack integration](https://github.com/IBM-Cloud/github-traffic-stats/)
 * Check out the blog on [automated reports with cloud functions, Db2 and Slack](https://blog.4loeser.net/2018/10/automated-reported-with-ibm-cloud.html). It shows how Db2-based statistic reports can be pushed into Slack channels on a regular basis.
 * [IBM Cloud solution tutorial on how to build Db2-based Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
+* The files [systemInfo.js](systemInfo.js) and [setupMoreActions.sh](setupMoreActions.sh) contain the code and script to add another action to the Slackbot tutorial. That action can retrieve Db2 system information. Add an intent to the conversation workspace, then nodes similar to the event retrieval and test it.
 
 Note:
 * Eine deutsche Version meines Chatbot-Talks ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).   
