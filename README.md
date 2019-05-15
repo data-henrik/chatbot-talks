@@ -3,6 +3,7 @@ Resources for my July 2018 talks on chatbots. To see this introduction as presen
 
 * Eine deutsche Version ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).
 * The IDUG EMEA 2018 version is accessible in the branch [idug2018](https://github.com/data-henrik/chatbot-talk2018/tree/idug2018)
+* * The IDUG NA 2019 version is accessible in the branch [idugNA2019](https://github.com/data-henrik/chatbot-talk2018/tree/idugNA2019)
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
@@ -28,9 +29,9 @@ The following architecture diagram is part of the [Cloud Insurance Co](https://g
 
 ### Tutorials & Demos
 The following tutorials give a good introduction to chatbots:
-* [Getting started tutorial for Watson Assistant](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
-* [Build a database-driven Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
-* [Build a voice-enabled Android chatbot](https://console.bluemix.net/docs/tutorials/android-watson-chatbot.html)
+* [Getting started tutorial for Watson Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-getting-started)
+* [Build a database-driven Slackbot](https://cloud.ibm.com/docs/tutorials/slack-chatbot-database-watson.html#build-a-database-driven-slackbot)
+* [Build a voice-enabled Android chatbot](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-android-watson-chatbot)
 * [Cloud insurance Co.](https://github.com/IBM-Cloud/cloudco-insurance)
 * [Bot Asset Exchange](https://developer.ibm.com/code/exchanges/bots/)
 
