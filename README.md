@@ -1,10 +1,10 @@
 # Building a Slack or Facebook bot for Db2
-Resources for my talk at IDUG EMEA 2018 in Malta. Things I cover(ed):
-* [Slack](https://slack.com/) as query interface, using [IBM Watson Assistant](https://console.bluemix.net/docs/services/conversation/index.html#about) to process the natural language input.
+Resources for my talk at IDUG NA 2019 in Charlotte, NC, USA. Things I cover(ed):
+* [Slack](https://slack.com/) as query interface, using [IBM Watson Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-index) to process the natural language input.
 * [Open source drivers for IBM database servers](https://github.com/ibmdb/) to connect the chatbot middleware and Watson Assistant to Db2.
 * Code is based on the GitHub repos [Slack chatbot with Db2 integration](https://github.com/IBM-Cloud/slack-chatbot-database-watson) and [GitHub traffic stats, Slack integration](https://github.com/IBM-Cloud/github-traffic-stats/)
 * Check out the blog on [automated reports with cloud functions, Db2 and Slack](https://blog.4loeser.net/2018/10/automated-reported-with-ibm-cloud.html). It shows how Db2-based statistic reports can be pushed into Slack channels on a regular basis.
-* [IBM Cloud solution tutorial on how to build Db2-based Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
+* [IBM Cloud solution tutorial on how to build Db2-based Slackbot](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson)
 * The files [systemInfo.js](systemInfo.js) and [setupMoreActions.sh](setupMoreActions.sh) contain the code and script to add another action to the Slackbot tutorial. That action can retrieve Db2 system information. Add an intent to the conversation workspace, then nodes similar to the event retrieval and test it.
 
 Note:
@@ -32,14 +32,6 @@ The following architecture diagram is part of the [Cloud Insurance Co](https://g
 ![](https://github.com/IBM-Cloud/cloudco-insurance/raw/master/architecture.png)
 
 # Resources
-
-### Tutorials & Demos
-The following tutorials give a good introduction to chatbots:
-* [Getting started tutorial for Watson Assistant](https://console.bluemix.net/docs/services/conversation/getting-started.html#gettingstarted)
-* [Build a database-driven Slackbot](https://console.bluemix.net/docs/tutorials/slack-chatbot-database-watson.html)
-* [Build a voice-enabled Android chatbot](https://console.bluemix.net/docs/tutorials/android-watson-chatbot.html)
-* [Cloud insurance Co.](https://github.com/IBM-Cloud/cloudco-insurance)
-* [Bot Asset Exchange](https://developer.ibm.com/code/exchanges/bots/)
 
 ### Related blog posts
 I wrote quite a number of blog posts about chatbots. The articles have links to further information.
