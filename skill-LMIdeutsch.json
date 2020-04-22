@@ -1,0 +1,383 @@
+{
+  "intents": [
+    {
+      "intent": "wikipedia",
+      "examples": [
+        {
+          "text": "Ich weiß einen Begriff nicht"
+        },
+        {
+          "text": "Kennst du das"
+        },
+        {
+          "text": "Schlag mal für mich nach"
+        },
+        {
+          "text": "Ich brauche ein Lexikon"
+        },
+        {
+          "text": "Schau mal in Wikipedia nach"
+        }
+      ],
+      "description": "Daten für Wikipedia-Abfrage"
+    },
+    {
+      "intent": "joke",
+      "examples": [
+        {
+          "text": "Erzähl etwas Lustiges"
+        },
+        {
+          "text": "Erzähl mir einen Witz"
+        },
+        {
+          "text": "Kennst du Komisches?"
+        },
+        {
+          "text": "Kennst du einen Witz?"
+        }
+      ],
+      "description": "Einen Witz erzählen"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "langcode",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "de",
+          "synonyms": [
+            "deutsch",
+            "DE"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "en",
+          "synonyms": [
+            "englisch",
+            "english"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fr",
+          "synonyms": [
+            "Französisch",
+            "french"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "schlagwort",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "Begriff",
+          "patterns": [
+            "\"([A-Za-z_0-9\\.]*)\""
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-de.functions.cloud.ibm.com/api/v1/web/REPLACE_THIS_WITH_YOUR_URI/wiki.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "parent": "node_6_1587471286225",
+      "variable": "$schlagwort",
+      "dialog_node": "slot_3_1587471589174",
+      "previous_sibling": "slot_1_1587471310971"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1587471286225",
+      "dialog_node": "slot_8_1587472803444",
+      "previous_sibling": "slot_3_1587471589174"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_6_1587471286225",
+      "variable": "$langcode",
+      "dialog_node": "slot_1_1587471310971",
+      "previous_sibling": "response_10_1587473515840"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Das Ergebnis aus Wikipedia: "
+              },
+              {
+                "text": "<? $webhook_result_1.info ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1587471286225",
+      "context": {
+        "langcode": null,
+        "schlagwort": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Willkommen"
+      },
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_10_1587473515840"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "In welcher Sprache?",
+            "options": [
+              {
+                "label": "de",
+                "value": {
+                  "input": {
+                    "text": "de"
+                  }
+                }
+              },
+              {
+                "label": "en",
+                "value": {
+                  "input": {
+                    "text": "en"
+                  }
+                }
+              },
+              {
+                "label": "fr",
+                "value": {
+                  "input": {
+                    "text": "fr"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_1_1587471310971",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1587471311004",
+      "previous_sibling": "handler_10_1587471311004"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1587471310971",
+      "context": {
+        "langcode": "@langcode"
+      },
+      "conditions": "@langcode",
+      "event_name": "input",
+      "dialog_node": "handler_10_1587471311004"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Welchen Begriff? Bitte in \" \" eingeben"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1587471589174",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1587471589181",
+      "previous_sibling": "handler_2_1587471589181"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1587471589174",
+      "context": {
+        "schlagwort": "@schlagwort.literal"
+      },
+      "conditions": "@schlagwort.literal",
+      "event_name": "input",
+      "dialog_node": "handler_2_1587471589181"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1587472803444",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1587472803450",
+      "previous_sibling": "handler_5_1587472803450"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_8_1587472803444",
+      "event_name": "input",
+      "dialog_node": "handler_5_1587472803450"
+    },
+    {
+      "type": "standard",
+      "title": "Andernfalls",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ich habe Sie nicht verstanden. Bitte formulieren Sie Ihre Aussage neu."
+              },
+              {
+                "text": "Können Sie Ihre Aussage anders formulieren? Ich verstehe nicht, was Sie meinen."
+              },
+              {
+                "text": "Ich habe nicht verstanden, was Sie meinen."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Andernfalls",
+      "previous_sibling": "node_6_1587471286225",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "Wiki",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "lang": "$langcode",
+            "searchterm": "<? $schlagwort.substring(1,$schlagwort.length()-1) ?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#wikipedia",
+      "dialog_node": "node_6_1587471286225",
+      "previous_sibling": "node_1_1587470928726"
+    },
+    {
+      "type": "standard",
+      "title": "erzähle Witz",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Chuck Norris hat keine Angst vor Chatbots."
+              },
+              {
+                "text": "Chuck Norris kennt die letzte Ziffer von Pi... (ich übrigens auch)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Willkommen"
+      },
+      "conditions": "#joke",
+      "dialog_node": "node_1_1587470928726",
+      "previous_sibling": "Willkommen"
+    },
+    {
+      "type": "standard",
+      "title": "Willkommen",
+      "output": {
+        "generic": [
+          {
+            "title": "Wie kann ich helfen?",
+            "options": [
+              {
+                "label": "Witz erzählen",
+                "value": {
+                  "input": {
+                    "text": "Einen Witz"
+                  }
+                }
+              },
+              {
+                "label": "Etwas nachschlagen",
+                "value": {
+                  "input": {
+                    "text": "Schau bei wikipedia"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Willkommen"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Meinten Sie:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nichts von dem oben genannten"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Meinten Sie:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "LMIdeutsch",
+  "language": "de",
+  "description": "Skill für Let's Make It workshop"
+}

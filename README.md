@@ -1,9 +1,5 @@
-# Chatbots - Getting Started 2018
-Resources for my July 2018 talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
-
-* Eine deutsche Version ist im Branch [deutsch_httf](https://github.com/data-henrik/chatbot-talk2018/tree/deutsch_httf).
-* The IDUG EMEA 2018 version is accessible in the branch [idug2018](https://github.com/data-henrik/chatbot-talk2018/tree/idug2018)
-* The IDUG NA 2019 version is accessible in the branch [idugNA2019](https://github.com/data-henrik/chatbot-talk2018/tree/idugNA2019)
+# Chatbots - Getting Started 2020
+Resources for my talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
 
 ![](assets/images/can-chat-chatting-362.jpg)
 
@@ -26,6 +22,7 @@ The following architecture diagram is part of the [Cloud Insurance Co](https://g
 ![](https://github.com/IBM-Cloud/cloudco-insurance/raw/master/architecture.png)
 
 # Resources
+This list is not maintained anymore, but kept for nostalgic reasons... ;-)
 
 ### Tutorials & Demos
 The following tutorials give a good introduction to chatbots:
