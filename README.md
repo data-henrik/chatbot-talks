@@ -1,6 +1,9 @@
 # Chatbots - Getting Started 2020
 Resources for my talks on chatbots. To see this introduction as presentation, render the [PITCHME.md on GitPitch](https://gitpitch.com/data-henrik/chatbot-talk2018/master).
 
+There is a separate file with [instructions for the workshop](INSTRUCTIONS.md).
+
+
 ![](assets/images/can-chat-chatting-362.jpg)
 
 # Overview
