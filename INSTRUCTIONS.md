@@ -10,7 +10,7 @@ The second chatbot feature, looking something up in Wikipedia, is more complicat
 ## Deploy
 
 
-### Short version (with pre-build skill)
+### Short version (with pre-built skill)
 Based on existing skill to import
 1. Provision an instance of IBM Watson Assistance
 2. Go to service dashboard and launch Watson Assistant
@@ -48,14 +48,21 @@ Based on existing skill to import
 
     d) The call to the webhook returns the result in the specified variable. Leave it as is.   
 
-    e) Click on the gear icon to open a form for the webhook-related settings. 
+    e) Click on the gear icon to open a form for the webhook-related settings. Then click on the three dots on the right and open the context editor.
+
+    f) Put in two rows and use "langcode" and "schlagwort" as variables and "null" as values. This resets the variables, so that the chatbot is able to ask for new values later on.
+
+    g) As the chatbot response of type Text add a first line as "Das Ergebnis aus Wikipedia:" and as second line "<? $webhook_result_1.info ?>". Enable a multiline reponse. The chatbot will print out the short intro on the first line. The second lise is the result from the webhook call, but only the value for the key "info".
+
+    h) Last, set how the bot should continue. Select "Jump to" and "evaluate response" and select the "Welcome" / "Willkommen" dialog node.
+
+    i) Click "Save" to return to the dialog node itself. You are done.
+
     ![](assets/WAchatbot_dialog_webhook.jpg)
 
-    Finally, everything should look similar to this.
+14. Finally, everything should look similar to this.
 
     ![](assets/WAchatbot_dialog_schlagwort.png)
-
-14. tbd
 
 
 
