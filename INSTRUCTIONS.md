@@ -35,7 +35,24 @@ Based on existing skill to import
 
 12. Name the first dialog node "tell a joke" or "erzähle einen Witz". It needs to react to the intent "#joke". As response of type Text put in at least two jokes. When it is done, the dialog needs to "Jump to" a specific node and respond. Select the first node "Welcome" / "Willkommen" as target.
     ![](assets/WAchatbot_dialog_joke.png)
-13. Next, name the second dialog node "wikipedia" and make it react to the intent "#wikipedia". Click on the gear icon (customize) and enable slots and webhooks. Ignore the warning about the missing webhook URL.
+13. Next, name the second dialog node "wikipedia" and make it react to the intent "#wikipedia". Click on the gear icon (customize) and enable slots and webhooks. Ignore the warning about the missing webhook URL.  
+
+    a) Back in the node configuration, add two slots. In the first check for "@langcode" and save it to a variable "$langcode". 
+
+    b) In the second slot check for "@schlagwort.literal" and save it to "$schlagwort". Using ".literal" the entered text is saved, not the detected entity value which would be "begriff". If nothing is present, the chatbot should ask: *Welchen Begriff? Bitte in " " eingeben.*   
+
+    c) Next, in the section for calling out to the webhook, two parameters are required. The first has the key `lang` and the value `$langcode`. The second has the key `searchterm` and the following expression as value:   
+    ```
+    "<? $schlagwort.substring(1,$schlagwort.length()-1) ?>"
+    ```
+
+    d) The call to the webhook returns the result in the specified variable. Leave it as is.   
+
+    e) Click on the gear icon to open a form for the webhook-related settings. 
+    ![](assets/WAchatbot_dialog_webhook.jpg)
+
+    Finally, everything should look similar to this.
+
     ![](assets/WAchatbot_dialog_schlagwort.png)
 
 14. tbd
