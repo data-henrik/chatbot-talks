@@ -48,7 +48,9 @@ At this time, you could use the "Try it" button to test that telling a joke work
 
 
 1.  Next, name the second dialog node "wikipedia" and make it react to the intent "#wikipedia". Click on the gear icon (customize) and enable slots and webhooks. Ignore the warning about the missing webhook URL.  
-2.  Back in the node configuration, add two slots. In the first check for "@langcode" and save it to a variable "$langcode". 
+2.  Back in the node configuration, add two slots. In the first check for "@langcode" and save it to a variable "$langcode". Click on the gear icon to customize the slot. Switch from **Text** to **Option** as response type. Add three options with labels "de", "en", "fr" and the same as values. Use "In welcher Sprache?" / "Which language?" as title. Click **Save** to return to the dialog node form.
+
+    ![](assets/WAchatbot_dialog_slots.jpg)
 3.  In the second slot check for "@schlagwort.literal" and save it to "$schlagwort". Using ".literal" the entered text is saved, not the detected entity value which would be "begriff". If nothing is present, the chatbot should ask: *Welchen Begriff? Bitte in " " eingeben.*   
 4.  Next, in the section for calling out to the webhook, two parameters are required. The first has the key `lang` and the value `$langcode`. The second has the key `searchterm` and the following expression as value:   
     ```
@@ -68,6 +70,7 @@ At this time, you could use the "Try it" button to test that telling a joke work
     ![](assets/WAchatbot_dialog_schlagwort.png)
 
 12. One more thing... Click on **Options** and change the webhook URI to your URI (either the one provided or [see below](#create-a-cloud-functions-action-as-webhook)).
+13. There is even more. In the dialog, click on the "Welcome" / "Willkommen" node. Change the response type from **Text** to **Option**. Use "How can I help?" / "Wie kann ich helfen?" as title and add two options. The first has the label "Witz erzählen" ("tell a joke") and the value "erzähle einen Witz" ("tell me a joke"). The second option has the label "Etwas nachschlagen" ("look up a term") and the value "schau bei Wikipedia" ("search Wikipedia"). Save it. It adds clickable labels and hence enhances usability.
 
 
 # Create Assistent
@@ -81,6 +84,7 @@ The skill can be tested on its own using "**Try it**". However, a chatbot consis
 ![](assets/WAchatbot_preview.jpg)
 
 # Test
+In the preview window, try out the dialog by using the clickable options and by entering text.
 
 
 # Create a Cloud Functions action as webhook
