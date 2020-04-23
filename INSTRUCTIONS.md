@@ -73,7 +73,7 @@ At this time, you could use the "Try it" button to test that telling a joke work
 13. There is even more. In the dialog, click on the "Welcome" / "Willkommen" node. Change the response type from **Text** to **Option**. Use "How can I help?" / "Wie kann ich helfen?" as title and add two options. The first has the label "Witz erzählen" ("tell a joke") and the value "erzähle einen Witz" ("tell me a joke"). The second option has the label "Etwas nachschlagen" ("look up a term") and the value "schau bei Wikipedia" ("search Wikipedia"). Save it. It adds clickable labels and hence enhances usability.
 
 
-# Create Assistent
+# Create Assistant
 The skill can be tested on its own using "**Try it**". However, a chatbot consists of an assistant with one or more skill. Let's create the assistant.
 
 1. Click on the **Assistants** icon in the menu on the left and switch to that tab.
