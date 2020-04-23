@@ -84,7 +84,11 @@ The skill can be tested on its own using "**Try it**". However, a chatbot consis
 ![](assets/WAchatbot_preview.jpg)
 
 # Test
-In the preview window, try out the dialog by using the clickable options and by entering text.
+In the preview window, try out the dialog by using the clickable options and by entering text. You can combine everything into a single sentence like:
+
+> Schaue im deutschen Lexikon den Begriff "Quantum Computing" nach.
+
+![](assets/WAchatbot_dialog_test.jpg)
 
 
 # Create a Cloud Functions action as webhook
