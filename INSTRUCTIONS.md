@@ -89,3 +89,5 @@ In the preview window, try out the dialog by using the clickable options and by 
 
 # Create a Cloud Functions action as webhook
 Go to https://cloud.ibm.com/functions/actions and create a new Python 3.7 action by using the source from [wikiExtract.py](functions/wikiExtract.py). Once created, click on **Endpoints** and **Enable as Web Action**. After you save the changes, the URL for the webhook is shown. Use that URL in the skill **Options** to configure the webhook.
+
+You can find [code to interact with a database instead of Wikipedia in this repository](https://github.com/IBM-Cloud/slack-chatbot-database-watson). It is part of the [tutorial on building a database-driven Slackbot](https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-slack-chatbot-database-watson).
