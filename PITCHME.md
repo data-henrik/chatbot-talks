@@ -37,6 +37,14 @@ Understanding the user's intent and producing the correct answer.
 ## Cloud Insurance Co.
 ![](https://github.com/IBM-Cloud/cloudco-insurance/raw/master/architecture.png)
 
+---
+## Workshop today
+<br>
+- Chatbot in Watson Assistant
+- Dialog Skill + Assistant
+- static response (tell me a joke)
+- dynamic response (Wikipedia / database lookup)
+
 ---?image=assets/images/can-chat-chatting-362.jpg&size=auto 110%
 <br>
 <br>
