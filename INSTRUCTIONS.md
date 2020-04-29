@@ -30,7 +30,7 @@ Get started:
 5. Create an intent "#joke" with examples like "Tell me a joke" / "Erzähle mir einen Witz", "Do you know a joke" / "Kennst du Witze", ...
 6. Create an intent "#wikipedia" with examples like "Look up in Wikipedia" / "Schau in Wikipedia nach", "Do you have a lexicon" / "Hast du ein Lexikon", ...
    
-With some intents in place we already could build a dialog and use "Try it" to see whether the intents are detected. However, we are going to add two entities first.
+With some intents in place we already could build a dialog and use "Try it" to see whether the intents are detected. However, we are going to add two entities first. You can use the "Clear" button / link to reset the current test session. You can also inspect or edit the context variables by using the context management.
 
 
 1. Switch to Entities
