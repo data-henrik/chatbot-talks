@@ -44,7 +44,7 @@ With some intents in place we already could build a dialog and use "Try it" to s
 6.  Name the first dialog node "tell a joke" or "erzähle einen Witz". It needs to react to the intent "#joke". As response of type Text put in at least two jokes. When it is done, the dialog needs to "Jump to" a specific node and respond. Select the first node "Welcome" / "Willkommen" as target.
     ![](assets/WAchatbot_dialog_joke.png)
 
-At this time, you could use the "Try it" button to test that telling a joke works as expected.
+At this time, you could use the "Try it" button to test that telling a joke works as expected. To redo the test, you might need to "Clear" the context and session.
 
 
 1.  Next, name the second dialog node "wikipedia" and make it react to the intent "#wikipedia". Click on the gear icon (customize) and enable slots and webhooks. Ignore the warning about the missing webhook URL.  
